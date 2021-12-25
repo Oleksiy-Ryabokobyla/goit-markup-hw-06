@@ -12,6 +12,7 @@
   --card-set-gap: 30px;
   --grey-icon-color: #afb1b8;
   --footer-socials-bgc: rgba(255, 255, 255, 0.1);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: "Roboto", "Arial", sans-serif;
@@ -93,7 +94,7 @@ img {
   padding: 20px 0;
   transition-property: color;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -135,7 +136,7 @@ img {
   align-items: center;
   transition-property: color;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -184,7 +185,7 @@ img {
   border-radius: 4px;
   transition-property: background-color;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -329,7 +330,7 @@ img {
   border-radius: 50%;
   transition-property: background-color;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .team-socials-link:hover,
 .team-socials-link:focus {
@@ -339,7 +340,7 @@ img {
   fill: var(--grey-icon-color);
   transition-property: fill;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .team-socials-link:hover .team-socials-icon,
 .team-socials-link:focus .team-socials-icon {
@@ -380,7 +381,7 @@ img {
   align-items: center;
   transition-property: border-color;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -390,7 +391,7 @@ img {
   fill: var(--grey-icon-color);
   transition-property: fill;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
@@ -427,7 +428,7 @@ img {
   line-height: 1.8;
   transition-property: color;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .footer-contact-link {
   font-style: normal;
@@ -437,7 +438,7 @@ img {
   line-height: 1.8;
   transition-property: color;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .footer-map-link:hover,
 .footer-map-link:focus,
@@ -449,9 +450,12 @@ img {
   margin-bottom: 9px;
 }
 /* footer socials block */
+.footer-socials {
+  margin-right: 93px;
+}
 .footer-socials-title {
+  display: block;
   font-size: 14px;
-  font-weight: bold;
   color: var(--main-white-color);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -470,7 +474,7 @@ img {
   background-color: var(--footer-socials-bgc);
   transition-property: background-color;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .footer-socials-link:hover,
 .footer-socials-link:focus {
@@ -489,7 +493,74 @@ img {
 .footer-socials-icon {
   fill: var(--main-white-color);
 }
-/* ==================== modal styles ==================== */
+/*           footer-mailing-box            */
+.footer-mailing-box {
+  display: flex;
+  flex-direction: column;
+}
+.mailing-form {
+  display: flex;
+  position: relative;
+}
+.mailing-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+
+  margin-bottom: 20px;
+}
+.mailing-label {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: opacity 0.25s var(--timing-function);
+}
+.mailing-input {
+  display: block;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 0 10px 0 16px;
+
+  border-radius: 4px;
+  border-style: none;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+
+  color: var(--main-white-color);
+  background-color: var(--secondary-background-color);
+}
+.mailing-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 28px;
+
+  border-radius: 4px;
+  border-style: none;
+
+  color: var(--main-white-color);
+  background-color: var(--brand-color);
+
+  cursor: pointer;
+
+  transition: background-color 0.25s var(--timing-function);
+}
+.mailing-submit-btn:hover,
+.mailing-submit-btn:focus {
+  background-color: rgb(4, 115, 206);
+}
+.mailing-btn-icon {
+  margin-left: 10px;
+  fill: var(--main-white-color);
+}
+.mailing-input:not(:placeholder-shown) + .mailing-label {
+  opacity: 0;
+}
+/*             modal styles             */
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -499,7 +570,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   transition-property: opacity;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .modal-backdrop.is-hidden {
   opacity: 0;
@@ -512,38 +583,54 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
+  padding: 40px;
+
   background-color: var(--main-white-color);
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
+
   transform: translate(-50%, -50%) scale(1);
   transition-property: transform;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .modal-close-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 8px;
   right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5em;
+
   width: 30px;
   height: 30px;
   background-color: var(--main-white-color);
+  padding: 0;
   border-width: 1px;
   border-radius: 50%;
   border-color: rgba(0, 0, 0, 0.1);
+
   cursor: pointer;
+  transition: color 0.25s var(--timing-function);
 }
-.close-btn-icon {
-  fill: var(--solid-black-color);
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: var(--brand-color);
 }
-/* modal close/open animations
-@keyframes open {
-} */
+
+.modal-title {
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--solid-black-color);
+}
 /* ======================= portfolio.html main section styles ================================ */
 .filter {
   display: flex;
@@ -564,7 +651,7 @@ img {
   padding: 6px 22px;
   transition-property: color, background-color, box-shadow;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .filter-item:not(:last-child) {
   margin-right: 8px;
@@ -605,7 +692,7 @@ img {
   display: block;
   transition-property: box-shadow;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .project-link:hover,
 .project-link:focus {
@@ -631,7 +718,7 @@ img {
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
 }
 .overlay-text {
   font-size: 18px;
