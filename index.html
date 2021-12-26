@@ -371,7 +371,7 @@
         </div>
       </section>
     </main>
-    <!-- footer -->
+    <!--                            footer                                     -->
     <footer class="footer">
       <div class="container">
         <div class="footer-left-part">
@@ -400,7 +400,7 @@
             </ul>
           </address>
         </div>
-        <!------------ footer socials block ------------>
+        <!--                              footer socials block                                  -->
         <div class="footer-socials">
           <b class="footer-socials-title">присоединяйтесь</b>
           <ul class="footer-socials-list">
@@ -455,12 +455,56 @@
         </div>
       </div>
     </footer>
+    <!--          modal window markup          -->
     <div class="modal-backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           &#xd7;
         </button>
         <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+        <form>
+          <label class="form-input-box">
+            Имя
+            <input type="text" class="form-input" name="name" />
+            <svg class="form-input-icon" width="18px" height="18px">
+              <use href="./images/sprite.svg#icon-human"></use>
+            </svg>
+          </label>
+          <label class="form-input-box">
+            Телефон
+            <input type="tel" class="form-input" name="phone-number" />
+            <svg class="form-input-icon" width="18px" height="18px">
+              <use href="./images/sprite.svg#icon-handset"></use>
+            </svg>
+          </label>
+          <label class="form-input-box">
+            Почта
+            <input type="email" class="form-input" name="email-address" />
+            <svg class="form-input-icon" width="18px" height="18px">
+              <use href="./images/sprite.svg#icon-mail"></use>
+            </svg>
+          </label>
+          <label class="form-input-box">
+            Комментарий
+            <textarea
+              name="comment"
+              class="form-comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <label for="policy-input" class="policy-box">
+            <input
+              type="checkbox"
+              name="policy-checkbox"
+              id="policy-input"
+              class="policy-input"
+            />
+            <span class="policy-checkbox"></span>
+            Соглашаюсь с рассылкой и принимаю &nbsp;
+            <a href="#" class="policy-link">Условия договора</a>
+          </label>
+          <button type="submit" class="form-submit-btn">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
