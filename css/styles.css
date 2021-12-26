@@ -720,16 +720,11 @@ img {
   position: absolute;
 
   width: 16px;
-  height: 16px;
+  height: 15px;
   margin-left: -25px;
 
-  background-image: url(../images/uncheck.svg);
-  background-color: var(--main-white-color);
-  background-repeat: no-repeat;
-  background-position: center;
-
   border-radius: 2px;
-  outline: 2px solid transparent;
+  outline: 2px solid var(--solid-black-color);
 
   transition: outline 0.25s var(--timing-function);
 }
@@ -738,12 +733,12 @@ img {
   background-color: var(--brand-color);
   background-repeat: no-repeat;
   background-position: center;
-  background-origin: cover;
+  background-size: cover;
   border-radius: 2px;
+  outline: none;
 }
 .policy-input:focus + .policy-checkbox {
   border-radius: 2px;
-  border: 2px solid var(--brand-color);
   outline: 2px solid var(--brand-color);
 }
 .policy-link {
